@@ -1,24 +1,24 @@
-const mongoose =require('mongoose');
+const mongoose = require('mongoose');
 //estrutura das postagens
 const Schema = mongoose.Schema;
 const PostSchema = new Schema({
     title:{
-        title:String,
-        require:true
+        type:String,
+        required:true
     },
     body:{
         type:String,
-        require:true
+        required:true
     },//criação tabela**
-    createAt: {
+    createdAt: {
         type:Date,
         default:Date.now
     },
-    UpdateAt: {
+    UpdatedAt: {
         type:Date,
         default:Date.now
     }
 
-});
+    });
 
 module.exports = mongoose.model('Post', PostSchema)

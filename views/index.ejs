@@ -1,5 +1,5 @@
 <div class="author">
-    <h1 class="author__heading">Hello my name is Fihr</h1>
+    <h1 class="author__heading">Olá eu, me chamo Fihr</h1>
     <p class="author__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc est nibh, mollis vitae mi vitae, ultricies 
         suscipit justo. Etiam imperdiet gravida nunc, eget fringilla lectus accumsan nec. Suspendisse a ex id lectus 
         tincidunt tincidunt. Vivamus fermentum venenatis cursus. </p>
@@ -12,19 +12,23 @@
     <h2 class="articles__heading"></h2>Ultimas Postagens</h2>
 
     <ul class="article-ul">
-        <li>
-            <a href="#">
-                <span>Titulo da Postagem</span>
-                <span class="article-list__date">Data</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span>Titulo da Postagem</span>
-                <span class="article-list__date">Data</span>
-            </a>
-        </li>
-    </ul>
-</section>
 
-<a href="#" class="pagination">&lt; Ver Postagens mais Antigos</a>
+        <% data.forEach(post => { %>
+            <li>
+                <a href="/post/<%= post._id %>">
+                    <span><%= post.title %></span>
+                    <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+                </a>
+            </li>
+
+        <% }) %>
+
+       
+    </ul>
+    <% if (nextPage !== null) { %>
+     <!-- checar se tem uma nextPage -->
+     
+         <a href="/?page=<%= nextPage %>"  class="pagination">&lt; Ver Postagens mais Antigos</a>
+    <% } %>
+
+</section>
