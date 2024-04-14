@@ -11,6 +11,10 @@ const PORT = 5000 || process.env.PORT
 //Conexao com DB(inicio da função)
 connectDB()
 
+//pesquisa com serachBar
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
+
 app.use(express.static('public'))//setando pasta public
 
 //Template Engine

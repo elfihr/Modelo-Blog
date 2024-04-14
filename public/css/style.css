@@ -80,6 +80,10 @@ textarea {
     padding: 20px 0;
  }
 
+ .main h1{
+  font-size: 5rem;
+ }
+
  .hero-image{
     max-width: 1024px;
     filter:drop-shadow(0px 44px 34px rgba(0,0,0,.25));/*sombreamento*/
@@ -175,10 +179,12 @@ textarea {
   
   
   /* =====Home Article List===== */
+
   .articles__heading {
     margin-top: 4rem;
     font-weight: 400;
   }
+
   
   .article-ul {
     list-style-type: none;
@@ -288,6 +294,7 @@ textarea {
     right: 0;
     color: var(--cor-light-100);
     padding: 15px;
+    cursor: pointer;
   }
   
     /*======Adm===== */
