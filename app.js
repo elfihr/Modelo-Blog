@@ -22,7 +22,9 @@ app.use(expressLayout)
 app.set('layout', './layouts/main') //setando default layout
 app.set('view engine','ejs') //Setando view engine(html,css,js)
 
+//Rotas
 app.use('/', require('./server/routes/main'))
+app.use('/', require('./server/routes/admin'))
 
 
 app.listen(PORT, () => {
