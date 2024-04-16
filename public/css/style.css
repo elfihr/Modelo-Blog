@@ -10,6 +10,8 @@
     --cor-yellow-100:#f5ff62;
     --cor-yellow-150:#f5deb3;
 
+    --cor-red-150:#DD5746;
+
     --cor-dark-850:#271e1e;
     --cor-dark-999:#000;
 
@@ -51,7 +53,7 @@ textarea {
  .btn{
     background-color: var(--cor-dark-999);
     border: none;
-    color: var(--cor-light-100);
+    color: var(--cor-light-50);
     padding: 1rem 2rem ;
     text-decoration: none;
     margin: 4px 2px;
@@ -60,7 +62,8 @@ textarea {
 
  .btn-delete{
     padding: 10px 16px;
-    background-color:  var(--cor-yellow-100);
+    background-color:  var(--cor-red-150);
+    color: var(--cor-light-50);
  }
 
  .img{
